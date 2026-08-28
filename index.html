@@ -4,6 +4,15 @@
 <!-- Google tag (gtag.js) — CTB platform property G-Z9PBY6N7DX -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9PBY6N7DX"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-Z9PBY6N7DX");</script>
+<!--
+  The Meta pixel, and the clicks worth measuring. Before this the page reported page
+  views and nothing else: five WhatsApp links, none of them wired to anything, so GA4
+  had no real conversion to offer and Meta had no signal at all. Same dataset as every
+  other site in the group; the listener is the one used on the apex.
+-->
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1308453116744339');fbq('track','PageView');</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1308453116744339&ev=PageView&noscript=1"></noscript>
+<script>(function(){var META={whatsapp_click:'Lead',email_click:'Contact',phone_click:'Contact'};function track(name,params){if(typeof gtag==='function')gtag('event',name,params||{});if(META[name]&&typeof fbq==='function')fbq('track',META[name],params||{});}document.addEventListener('click',function(event){var a=event.target&&event.target.closest&&event.target.closest('a[href]');if(!a)return;var href=a.getAttribute('href')||'';var where={link_text:(a.textContent||'').trim().slice(0,60)};if(href.indexOf('wa.me')>-1)track('whatsapp_click',where);else if(href.indexOf('mailto:')===0)track('email_click',where);else if(href.indexOf('tel:')===0)track('phone_click',where);});})();</script>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
